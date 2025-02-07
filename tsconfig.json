@@ -1,6 +1,12 @@
 {
   "compilerOptions": {
-    "module": "ESNext" // or ES2015, ES2020
+    "module": "ESNext", // or ES2015, ES2020
+    "strict": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
   },
   "ts-node": {
     // Tell ts-node CLI to install the --loader automatically
