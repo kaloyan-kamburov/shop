@@ -5,6 +5,8 @@ import {
   createProduct,
   updateProduct,
   deleteProduct,
+  createProductReview,
+  getTopProducts,
 } from "../controllers/productController.js";
 import { protect, admin } from "../middleware/authMiddleware.js";
 
@@ -14,6 +16,11 @@ const router = express.Router();
 // @route   GET /api/products
 // @access  Public
 router.route("/").get(getProducts);
+
+// @desc    Fetch top rated products
+// @route   GET /api/products/top
+// @access  Public
+router.route("/top").get(getTopProducts);
 
 // @desc    Fetch a product
 // @route   GET /api/products/:id
@@ -34,5 +41,10 @@ router.route("/:id").put(protect, admin, updateProduct);
 // @route   PUT /api/products/:id
 // @access  Private/Admin
 router.route("/:id").delete(protect, admin, deleteProduct);
+
+// @desc    Update a product
+// @route   POST /api/products/:id
+// @access  Private
+router.route("/:id/reviews").post(protect, createProductReview);
 
 export default router;
