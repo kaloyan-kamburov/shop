@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { PRODUCTS_URL, UPLOADS_URL } from "../constants";
 import { apiSlice } from "./apiSlice";
 

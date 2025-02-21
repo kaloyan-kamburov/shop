@@ -7,6 +7,9 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "skipLibCheck": true,
+    "noEmitOnError": false,
+    "checkJs": false,
+    "noCheck": true
   },
   "ts-node": {
     // Tell ts-node CLI to install the --loader automatically

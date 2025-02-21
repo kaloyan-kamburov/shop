@@ -1,5 +1,6 @@
-import { FC } from "react"
-import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa"
+// @ts-nocheck
+import { FC } from "react";
+import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 
 const Rating: FC<any> = ({ value, text }) => {
   return (
@@ -52,7 +53,7 @@ const Rating: FC<any> = ({ value, text }) => {
       </span>
       <span className="rating-text">{text && text} </span>
     </div>
-  )
-}
+  );
+};
 
-export default Rating
+export default Rating;

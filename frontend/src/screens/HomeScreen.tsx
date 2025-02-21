@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Row, Col } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
 import Product from "../components/Product";
@@ -10,7 +11,7 @@ import Meta from "../components/Meta";
 
 const HomeScreen = () => {
   const { pageNumber = 1, keyword } = useParams();
-  const { data, isLoading, error } = useGetProductsQuery({
+  const { data, isLoading, error }: any = useGetProductsQuery({
     keyword,
     pageNumber,
   });

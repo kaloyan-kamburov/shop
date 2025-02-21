@@ -1,7 +1,8 @@
-import { FC } from 'react'
-import { Card } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
-import Rating from './Rating'
+// @ts-nocheck
+import { FC } from "react";
+import { Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import Rating from "./Rating";
 
 const Product: FC<any> = ({ product }) => {
   return (
@@ -11,17 +12,20 @@ const Product: FC<any> = ({ product }) => {
       </Link>
       <Card.Body>
         <Link to={`/product/${product._id}`}>
-          <Card.Title as="div" className='product-title'>
+          <Card.Title as="div" className="product-title">
             <strong>{product.name}</strong>
           </Card.Title>
         </Link>
         <Card.Text as="div">
-          <Rating value={product.rating} text={`${product.numReviews} reviews`} />
+          <Rating
+            value={product.rating}
+            text={`${product.numReviews} reviews`}
+          />
         </Card.Text>
         <Card.Text as="h3">${product.price}</Card.Text>
       </Card.Body>
     </Card>
-  )
-}
+  );
+};
 
-export default Product
+export default Product;

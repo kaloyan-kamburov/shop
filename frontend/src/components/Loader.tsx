@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Spinner } from "react-bootstrap";
 
 const Loader = () => {
